@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Alumni Platform (FINAL LOCAL)</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  </head>
+<body>
+
+  <div id="global-loader">
+    <div class="loader-spinner"></div>
+  </div>
+
+  <div id="auth-container" class="hidden">
+    </div>
+
+  <div id="app-container" class="hidden">
+    
+    <nav class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <h3 class="sidebar-logo">AP</h3>
+        <h3 class="sidebar-title">Alumni Portal</h3>
+      </div>
+      <ul class="nav-list">
+        <li class="nav-item admin-only hidden" data-page="page-admin">
+          <button class="nav-btn"><i class="fas fa-database"></i><span>Alumni Records</span></button>
+        </li>
+        <li class="nav-item" data-page="page-feed">
+          <button class="nav-btn"><i class="fas fa-home"></i><span>Social Feed</span></button>
+        </li>
+        <li class="nav-item" data-page="page-directory">
+          <button class="nav-btn"><i class="fas fa-users"></i><span>Social Directory</span></button>
+        </li>
+         <li class="nav-item" data-page="page-messages">
+          <button class="nav-btn"><i class="fas fa-comment-dots"></i><span>Messages</span></button>
+        </li>
+        <li class="nav-item" data-page="page-events">
+          <button class="nav-btn"><i class="fas fa-calendar-check"></i><span>Events</span></button>
+        </li>
+        <li class="nav-item" data-page="page-careers">
+          <button class="nav-btn"><i class="fas fa-briefcase"></i><span>Careers</span></button>
+        </li>
+        <li class="nav-item" data-page="page-mentorship">
+          <button class="nav-btn"><i class="fas fa-hands-helping"></i><span>Mentorship</span></button>
+        </li>
+        <li class="nav-item" data-page="page-profile">
+          <button class="nav-btn"><i class="fas fa-user-circle"></i><span>My Profile</span></button>
+        </li>
+      </ul>
+    </nav>
+    <div class="sidebar-overlay" id="sidebar-overlay"></div> 
+    
+    <div class="main-content-wrapper">
+      <header class="top-bar">
+        <div class="top-bar-left">
+          <button class="icon-btn" id="hamburger-btn">
+            <i class="fas fa-bars"></i>
+          </button>
+          <button class="icon-btn hidden" id="back-btn">
+            <i class="fas fa-arrow-left"></i>
+          </button>
+        </div>
+        <h1 id="page-title">Home</h1>
+        <button class="icon-btn" id="settings-btn">
+          <i class="fas fa-cog"></i>
+        </button>
+      </header>
+
+      <main class="app-content" id="app-content-main">
+        <div id="page-admin" class="page-content"></div>
+        <div id="page-feed" class="page-content active"></div>
+        <div id="page-directory" class="page-content"></div>
+        <div id="page-events" class="page-content"></div>
+        <div id="page-careers" class="page-content"></div>
+        <div id="page-mentorship" class="page-content"></div>
+        <div id="page-messages" class="page-content"></div>
+        <div id="page-profile" class="page-content"></div>
+        
+        <div id="page-chat" class="page-content"></div> 
+      </main>
+    </div> 
+  </div>
+
+  <div id="modal" class="modal hidden">
+    <div class="modal-content">
+      <span class="close" id="modal-close-btn">&times;</span>
+      <div id="modal-body"></div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
